@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Login from "./Login";
 
 function Signup() {
   return (
@@ -10,7 +11,10 @@ function Signup() {
           <div className="modal-box">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <Link to="/" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              <Link
+                to="/"
+                className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+              >
                 ✕
               </Link>
             </form>
@@ -51,15 +55,17 @@ function Signup() {
                 <button className="bg-pink-500 text-white rounded-md px-3 py-1 hover:bg-pink-700 duration-200">
                   Signup
                 </button>
-                <p>
+                <p className="text-xl">
                   Have an account?{" "}
-                  <Link
-                    to="/"
+                  <button
                     className="underline text-blue-500 cursor-pointer"
-                    onClick={() => document.getElementById("my_modal_3").showModal()}
+                    onClick={() =>
+                      document.getElementById("my_modal_3").showModal()
+                    }
                   >
-                    Login
-                  </Link>{" "}
+                    Login                                                                                                                                                                                       
+                  </button>{" "}
+                  <Login />
                 </p>
               </div>
             </div>
